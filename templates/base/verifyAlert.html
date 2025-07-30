@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Verified</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-content .success {
+            font-size: 24px;
+            color: green;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .modal-content a {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .modal-content a:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Verified Popup -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="success">✅ Email Verified</div>
+            <p>Your email has been successfully verified.</p>
+            <a href="{% url 'login' %}">Go to Login</a>
+        </div>
+    </div>
+
+</body>
+</html>
